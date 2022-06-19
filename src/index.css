@@ -1,0 +1,191 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+a {
+  color: #3f51b5;
+  cursor: pointer;
+}
+a:hover {
+  color: #283484;
+  cursor: pointer;
+}
+ul,
+ol,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+}
+a > svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Quicksand", serif !important;
+}
+h1 > a,
+h2 > a,
+h3 > a,
+h4 > a,
+h5 > a,
+h6 > a {
+  color: currentColor;
+  text-decoration: none;
+}
+svg {
+  width: 24px;
+  height: 24px;
+}
+.app__spacer {
+  height: 61px;
+  width: 100%;
+}
+.app__section {
+  padding: 60px 0;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+.app__section .app__section_title {
+  text-align: center;
+  margin-bottom: 40px;
+  width: 100%;
+  max-width: 100%;
+  flex: 1 0 100%;
+}
+.app__section .app__section_title h2 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 30px;
+  color: #202020;
+  line-height: 23px;
+}
+.app__section .app__section_title span {
+  font-size: 15px;
+  color: #888888;
+  margin-top: 8px;
+  line-height: 29px;
+  display: block;
+}
+.app__section-bgImg {
+  background-size: cover;
+  position: relative;
+}
+.app__section-bgImg::before {
+  content: "";
+  height: 100%;
+  opacity: 0.95;
+  z-index: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: #283484;
+  opacity: 0.86;
+}
+.app__section-bgImg > * {
+  position: relative;
+  z-index: 1;
+}
+.app__section-bgImg.app__section .app__section_title h2,
+.app__section-bgImg.app__section .app__section_title span {
+  color: #fff;
+}
+.pagination {
+  justify-content: center;
+  margin-top: 40px;
+}
+.pagination li {
+  display: flex;
+  margin: 0px 3px;
+}
+.pagination li a {
+  padding: 8px 15px;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid #28348470;
+  border-radius: 100%;
+  min-width: 34px;
+  transition: all 0.3s ease-in-out;
+  color: #283484;
+  background: #dadcea;
+}
+.pagination li.disabled a {
+  cursor: not-allowed;
+  background: #f7f7f7;
+  border-color: #f1f1f1;
+}
+.pagination li.active a {
+  color: #ffffff;
+  background: #283484;
+  border-color: #283484;
+}
+.logo {
+  font-size: 40px;
+  color: #b9b9b9;
+  white-space: nowrap;
+  display: flex;
+  font-family: "Courgette", cursive;
+}
+.logo span {
+  color: #3f51b5;
+}
+.app__footer .logo,
+.app__footer .logo span {
+  color: #fff;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+b {
+  font-weight: 500;
+}
+@media (min-width: 1024px) {
+  .app__container {
+    max-width: 95%;
+  }
+}
+.login-form .form-group {
+  margin-bottom: 30px;
+}
+a[download] {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  background: #3f51b51f;
+  text-decoration: none;
+  padding-right: 13px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+a[download] svg {
+  margin-right: 8px;
+}
+a[download]:hover {
+  background: #3f51b5;
+  color: #fff;
+  cursor: pointer;
+}
+button,
+button:hover,
+button:focus {
+  cursor: pointer;
+}

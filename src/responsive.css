@@ -1,0 +1,314 @@
+@media (max-width: 600px) {
+  .app__header_links {
+    display: block;
+    position: fixed;
+    max-width: 250px;
+    background: #fff;
+    min-width: 250px;
+    z-index: 999;
+    top: 0;
+    left: -100%;
+    bottom: 0;
+    padding: 0;
+    padding-top: 20px;
+    max-height: 100vh;
+    overflow: auto;
+    box-shadow: 2px 0px 11px 0px #0000008c;
+    transition: all 0.3s ease-in-out;
+  }
+  .menu-close {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0%;
+    pointer-events: none;
+    padding-left: 15px;
+    padding-top: 15px;
+    height: 100vh;
+    background: #000000a6;
+    z-index: 99;
+    color: #fff;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  body.menu-open .menu-close {
+    padding-left: 265px;
+    pointer-events: all;
+    opacity: 1;
+  }
+  body.menu-open .app__header_links {
+    left: 0;
+  }
+  .app__header_links > a,
+  .app__header_links-dropDown > a {
+    padding: 10px 10px 10px 25px;
+  }
+  .app__header_links > a,
+  .app__header_links-dropDown {
+    border-bottom: 1px solid #dddddd6b;
+  }
+  .app__header_links > a:not(:last-child),
+  .app__header_links-dropDown:not(:last-child) {
+    margin: 0;
+    margin-bottom: 5px;
+  }
+  .app__header_logo img {
+    height: 30px;
+  }
+  .app__header_links-dropDown .app__header_links-dropDown--menu {
+    position: static;
+    opacity: 1;
+    pointer-events: all;
+    padding-top: 0px;
+    width: 100%;
+    min-width: inherit;
+    border: 0;
+    box-shadow: none;
+    padding-left: 10px;
+  }
+  .app__header_btnExtra-list > li:not(:last-child) {
+    padding-right: 15px;
+  }
+  .app__header_btnExtra-list > li > a {
+    white-space: nowrap;
+  }
+  .app__header .app__header_inner {
+    min-height: 60px;
+  }
+  .app__header .app__header_logo {
+    display: flex;
+    align-items: center;
+  }
+  .app__header_logo .menu-humbugger {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+  }
+  .app__header_logo .menu-humbugger span {
+    width: 26px;
+    height: 2px;
+    background: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  ul.app__header_btnExtra-list {
+    margin-left: 0;
+  }
+  .app__header_logo .menu-humbugger span::after,
+  .app__header_logo .menu-humbugger span::before {
+    content: "";
+    width: 26px;
+    height: 2px;
+    background: #666;
+    position: absolute;
+  }
+  .app__header_logo .menu-humbugger span::after {
+    bottom: -7px;
+  }
+  .app__header_logo .menu-humbugger span::before {
+    top: -7px;
+  }
+  .app__mainSearch {
+    height: auto;
+    z-index: 1;
+    margin-bottom: 130px;
+  }
+  .app__mainSearch .app__mainSearch_content h1 {
+    font-size: 32px;
+    margin-bottom: 0px;
+  }
+  .app__mainSearch .app__mainSearch_content .app__mainSearch_content-mutedText {
+    margin-top: 5px;
+  }
+  .app__mainSearch .app__mainSearch_from {
+    padding-top: 30px;
+    max-width: 95%;
+    margin: 0 auto;
+    clear: both;
+  }
+  .app__mainSearch .app__mainSearch_from .app__mainSearch_from-input,
+  .app__mainSearch .app__mainSearch_from .app__mainSearch_from-select,
+  .app__mainSearch .app__mainSearch_from .app__mainSearch_from-button {
+    padding-right: 0;
+  }
+  .app__mainSearch .app__mainSearch_from .app__mainSearch_from-input > input,
+  .app__mainSearch .app__mainSearch_from .app__mainSearch_from-select > select {
+    height: 45px;
+    margin-bottom: 8px;
+  }
+  .app__mainSearch
+    .app__mainSearch_from
+    .app__mainSearch_from-button
+    > .app__button {
+    height: 45px;
+  }
+  .app__mainSearch .app__mainSearch_from .app__mainSearch_from-input > svg,
+  .app__mainSearch .app__mainSearch_from .app__mainSearch_from-select > svg {
+    top: 9px;
+    right: 16px;
+  }
+  .hero-ja {
+    max-width: 100%;
+  }
+  .app__compWeHelpd {
+    justify-content: space-around;
+  }
+  .app__compWeHelpd .app__comp-img {
+    max-width: 45%;
+    flex: 1 0 45%;
+  }
+  .app__browseJobsLocation-item {
+    max-width: 50%;
+    flex: 1 0 50%;
+    margin-bottom: 15px;
+  }
+  .app__featuredJobs-item {
+    display: block;
+    padding-right: 0;
+  }
+  .app__featuredJobs-title {
+    display: block;
+    width: 100%;
+  }
+  .app__featuredJobs-title h3 {
+    font-size: 16px;
+  }
+  .app__featuredJobs-lctn {
+    display: block;
+    width: 80%;
+    float: left;
+    text-align: left;
+    clear: both;
+    padding-top: 10px;
+  }
+  .app__featuredJobs-job {
+    float: right;
+    padding-top: 10px;
+  }
+  .app__featuredJobs-is {
+    display: block;
+    max-width: 110px;
+    margin: auto;
+    clear: both;
+    float: none;
+    margin-top: 50px;
+  }
+  .app__section .app__section_title h2 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .app__search_options {
+    top: 100%;
+    margin-top: -10px;
+  }
+  .formSelectionList {
+    flex-wrap: wrap;
+    padding: 30px 0px;
+  }
+  .formSelectionList li {
+    margin-bottom: 20px;
+  }
+  .formHeader .formHeaderNav {
+    padding: 10px 15px;
+    min-width: calc(100% + 20px);
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  .formHeader .formHeaderNav li:not(:last-child) {
+    padding-right: 15px;
+  }
+  .formHeader .formHeaderNav li:not(:last-child) label > span::after {
+    right: 5px;
+  }
+  .app__section {
+    padding-top: 30px !important;
+  }
+  .app__search .app__search-form .app__search-input > input,
+  .app__search .app__search-form .app__search-select > select {
+    margin-bottom: 8px;
+  }
+  .app__search .app__search-form .app__search-input > svg,
+  .app__search .app__search-form .app__search-select > svg {
+    top: 11px;
+  }
+  .app__jobsBy {
+    flex-wrap: wrap;
+  }
+  .app__jobsBy a {
+    margin-bottom: 10px;
+  }
+  .pagination li a {
+    padding: 6px 13px;
+  }
+  .app__mainSearch
+    .app__mainSearch_from
+    .app__mainSearch_from-button
+    > .app__button
+    > span {
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding-left: 10px;
+  }
+  .profileBoxLinks {
+    margin-top: -20px;
+    height: 44px;
+    padding: 0px 10px;
+    overflow: hidden;
+    border-bottom: 2px solid #e7eaf6;
+  }
+  .profileBoxInner {
+    overflow-y: hidden;
+    overflow-x: auto;
+    display: flex;
+    padding-top: 0;
+    padding-bottom: 10px;
+  }
+  .profileBoxInner a,
+  .profileBoxInner button {
+    display: flex;
+    white-space: nowrap;
+    margin-bottom: 0;
+    border-radius: 5px 5px 0px 0px;
+  }
+  .search-filters .search-filter {
+    padding-bottom: 20px;
+  }
+  .app__search .app__search-form .app__search-button > .app__button.width-auto {
+    width: 100%;
+  }
+  .frmLabel {
+    float: none;
+    padding: 0;
+  }
+  .pdfBtn,
+  .btnPlay {
+    max-width: 100%;
+    flex: 1 0 100%;
+  }
+  .pdfBtn + .btnPlay {
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+  .search-filters .search-filter-content .search-filters-items {
+    max-height: inherit;
+    overflow: visible;
+  }
+}
+@media (min-width: 600px) {
+  .app__featuredJobs-item {
+    padding-left: 30px;
+  }
+  .about-image-block img {
+    max-width: 400px;
+    margin: 0px 20px 20px 0px;
+  }
+}
