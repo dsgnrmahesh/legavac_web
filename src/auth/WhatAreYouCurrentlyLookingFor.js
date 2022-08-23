@@ -71,8 +71,8 @@ export default function WhatAreYouCurrentlyLookingFor() {
                     <h4 align="center" className="formQue">
                       What are you currently looking for?
                     </h4>
-                    <ul className="formSelectionList">
-                      <li>
+                    <ul className="formSelectionList flex-wrap">
+                      <li className="mb-3">
                         <input
                           type="radio"
                           name="workStatus"
@@ -86,7 +86,7 @@ export default function WhatAreYouCurrentlyLookingFor() {
                           <span>Internships</span>
                         </label>
                       </li>
-                      <li>
+                      <li className="mb-3">
                         <input
                           type="radio"
                           name="workStatus"
@@ -98,6 +98,35 @@ export default function WhatAreYouCurrentlyLookingFor() {
                         <img src="/images/user-exprienced.png" alt="" />
                         <label htmlFor="workStatus_2">
                           <span>Fresher jobs</span>
+                        </label>
+                      </li>
+
+                      <li>
+                        <input
+                          type="radio"
+                          name="workStatus"
+                          id="workStatus_3"
+                          value="part_time"
+                          checked={status.LookingFor === "part_time"}
+                          onChange={handleChage}
+                        />
+                        <img src="/images/part-time.png" alt="" />
+                        <label htmlFor="workStatus_3">
+                          <span>Part Time</span>
+                        </label>
+                      </li>
+                      <li>
+                        <input
+                          type="radio"
+                          name="workStatus"
+                          id="workStatus_4"
+                          value="full_time"
+                          checked={status.LookingFor === "full_time"}
+                          onChange={handleChage}
+                        />
+                        <img src="/images/full-time-job.png" alt="" />
+                        <label htmlFor="workStatus_4">
+                          <span>Full Time</span>
                         </label>
                       </li>
                     </ul>

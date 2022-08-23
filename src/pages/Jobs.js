@@ -32,7 +32,11 @@ export default function Jobs() {
                   className={
                     query.get("search") === "jobs-by-company" ? "active" : ""
                   }
-                  href={`${window.location.origin}${window.location.pathname}?search=jobs-by-company`}
+                  href={`${window.location.origin}${window.location.pathname}${
+                    query.get("search") === "jobs-by-company"
+                      ? ""
+                      : "?search=jobs-by-company"
+                  }`}
                 >
                   Jobs by Company
                 </a>
@@ -40,7 +44,11 @@ export default function Jobs() {
                   className={
                     query.get("search") === "jobs-by-location" ? "active" : ""
                   }
-                  href={`${window.location.origin}${window.location.pathname}?search=jobs-by-location`}
+                  href={`${window.location.origin}${window.location.pathname}${
+                    query.get("search") === "jobs-by-location"
+                      ? ""
+                      : "?search=jobs-by-location"
+                  }`}
                 >
                   Jobs by Location
                 </a>
@@ -50,7 +58,11 @@ export default function Jobs() {
                       ? "active"
                       : ""
                   }
-                  href={`${window.location.origin}${window.location.pathname}?search=jobs-by-designation`}
+                  href={`${window.location.origin}${window.location.pathname}${
+                    query.get("search") === "jobs-by-location"
+                      ? ""
+                      : "?search=jobs-by-designation"
+                  }`}
                 >
                   Jobs by Designation
                 </a>
@@ -61,20 +73,23 @@ export default function Jobs() {
         <div className="py-3"></div>
         <Container fluid className="app__container">
           <Row>
-            {window.innerWidth > 600 ? 
-            <Col sm={12} md={4} lg={3}>
-              <JobsSearchFilters
-                setData={setData}
-                data={data}
-                search={query.get("search")}
-                k={query.get("k")}
-                l={query.get("l")}
-                e={query.get("e")}
-                setDataList_={setDataList_}
-                cn={query.get("cn")}
-                c={query.get("c")}
-              />
-            </Col> : <></>}
+            {window.innerWidth > 600 ? (
+              <Col sm={12} md={4} lg={3}>
+                <JobsSearchFilters
+                  setData={setData}
+                  data={data}
+                  search={query.get("search")}
+                  k={query.get("k")}
+                  l={query.get("l")}
+                  e={query.get("e")}
+                  setDataList_={setDataList_}
+                  cn={query.get("cn")}
+                  c={query.get("c")}
+                />
+              </Col>
+            ) : (
+              <></>
+            )}
             <Col sm={12} md={8} lg={9}>
               <div className="app__search-wraper">
                 {/* <div className="app__search-rslt_top">
@@ -90,7 +105,12 @@ export default function Jobs() {
                   </ul>
                 </div> */}
                 <div style={{ maxWidth: "100%", flex: "1 0 100%" }}>
-                  <JobsSearchComponent setData={setData} data={data} datalist_={datalist_} setDataList_={setDataList_} />
+                  <JobsSearchComponent
+                    setData={setData}
+                    data={data}
+                    datalist_={datalist_}
+                    setDataList_={setDataList_}
+                  />
                   {/* <div className="alert alert-danger" role="alert">
                     No...! Jobs Found
                   </div> */}
@@ -100,12 +120,16 @@ export default function Jobs() {
           </Row>
         </Container>
       </section>
-      {window.innerWidth < 600 ? <div className="bottom-row">
-        <button className="bottomRowFilters" onClick={() => setShow(true)}>
-          <Icon path={mdiFilterVariant} />
-          filters
-        </button>
-      </div> : <></>}
+      {window.innerWidth < 600 ? (
+        <div className="bottom-row">
+          <button className="bottomRowFilters" onClick={() => setShow(true)}>
+            <Icon path={mdiFilterVariant} />
+            filters
+          </button>
+        </div>
+      ) : (
+        <></>
+      )}
       <Modal show={show} fullscreen={true} onHide={() => setShow(false)}>
         <Modal.Header closeButton>
           <Modal.Title>Filters</Modal.Title>

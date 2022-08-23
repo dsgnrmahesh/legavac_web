@@ -1797,7 +1797,7 @@ select.frmInput {
 .formSelectionList {
   display: flex;
   justify-content: center;
-  padding: 50px 0px;
+  padding: 40px 0px;
 }
 .formSelectionList li {
   margin: 0px 20px;
@@ -1821,7 +1821,7 @@ select.frmInput {
   align-items: center;
 }
 .formSelectionList li img {
-  width: 100px;
+  width: 70px;
   display: block;
   margin: 0 auto;
 }

@@ -27,16 +27,28 @@ export default function Footer() {
                 </a>
 
                 <div className="app__footer_social">
-                  <a href="/" title="" className="fb">
+                  <a
+                    href="https://www.facebook.com/LegaVac"
+                    title=""
+                    className="fb"
+                  >
                     <Icon path={mdiFacebook} />
                   </a>
-                  <a href="/" title="" className="twtr">
+                  {/*<a href="/" title="" className="twtr">
                     <Icon path={mdiTwitter} />
-                  </a>
-                  <a href="/" title="" className="in">
+                  </a>*/}
+                  <a
+                    href="https://www.linkedin.com/company/77138339/admin/"
+                    title=""
+                    className="in"
+                  >
                     <Icon path={mdiLinkedin} />
                   </a>
-                  <a href="/" title="" className="insta">
+                  <a
+                    href="https://www.instagram.com/legavac1/"
+                    title=""
+                    className="insta"
+                  >
                     <Icon path={mdiInstagram} />
                   </a>
                 </div>
@@ -47,11 +59,12 @@ export default function Footer() {
                 <h3 className="app__footer-title">Address</h3>
                 <span>
                   <Icon path={mdiMapMarkerOutline} />
-                  Kharghar, Maharashtra - 411002
+                  Office- 1007, Kamdhenu Commerz Panvel Raigarh Kharghar Raigarh
+                  MH 410210 IN
                 </span>
-                <a href="tel:+91 9087 654 321">
+                <a href="tel:+91 70219 12110">
                   <Icon path={mdiPhoneInTalkOutline} />
-                  +91 9087 654 321
+                  +91 70219 12110
                 </a>
                 <a href="mailto:info@legavac.com">
                   <Icon path={mdiEmailOutline} />
@@ -98,7 +111,7 @@ export default function Footer() {
         </Container>
         <div className="app__footer_bottom-line">
           <span>
-            © 2021{" "}
+            © {new Date().getFullYear()}{" "}
             <span style={{ color: "#9bb1d4", fontWeight: 500 }}>LegaVac</span>{" "}
             All rights reserved. Design &amp; Developed by
             <a
