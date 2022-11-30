@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Carousel, Container } from "react-bootstrap";
 import SectionTitle from "../Commons/SectionTitle";
 import { getPostedJobFilterList } from "../config/api";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function CompaniesWeHelpedComponent() {
   // const [companyname, setCompanyName] = useState([]);
@@ -33,62 +36,56 @@ export default function CompaniesWeHelpedComponent() {
   //   "/images/company/ms-associates.jpeg",
   //   "/images/company/piyushchobe.jpeg",
   // ];
-  const comnamefirst = [
-    "/images/company/lexschool.jpeg",
-    "/images/company/lexcare.jpeg",
-    "/images/company/dhage-associates.jpeg",
-    "/images/company/jusoculus.jpeg",
-    "/images/company/ms-associates.jpeg",
-  ];
-  const comnamesecond = [
-    "/images/company/piyushchobe.jpeg",
-    "/images/company/lexschool.jpeg",
-    "/images/company/lexcare.jpeg",
-    "/images/company/dhage-associates.jpeg",
-    "/images/company/jusoculus.jpeg",
-  ];
+  
+  const settings = {
+    className: "",
+    infinite: true,
+    centerPadding: "0px",
+    slidesToShow: 5,
+    swipeToSlide: true,
+    afterChange: function (index) {
+      console.log(
+        `Slider Changed to: ${index + 1}, `
+      );
+    },
+  };
   return (
     <>
       <section className="app__section border-bottom">
-        <Container fluid>
+        <Container >
           <SectionTitle
             title="Companies We've Helped"
             subTitle="Some of the companies we've helped recruit excellent applicants over the years."
           />
-          <div className="app__compWeHelpd">
-            {/* {companyname.map((item, index) => (
+          {/* <div className="app__compWeHelpd">
+            {companyname.map((item, index) => (
               <div className="app__comp-img" key={index}>
                 <a href={"/jobs?cn="}>
                   <img src={item} alt="" style={{ maxHeight: 80 }} />
                 </a>
               </div>
-            ))} */}
-            <Carousel activeIndex={index} onSelect={handleSelect}>
-            <Carousel.Item>
-              <div className="app__compWeHelpd">
-                {comnamefirst.map((item, index) => (
-                  <div className="app__comp-img" key={index}>
-                    <a href={"/jobs?cn="}>
-                      <img src={item} alt="" style={{ maxHeight: 80 }} />
-                    </a>
-                  </div>
-                ))}
+            ))}
+          </div> */}
+          <Slider {...settings}>
+              <div>
+                <img src="/images/company/lexschool.jpeg" alt="" />
               </div>
-            </Carousel.Item>
-            <Carousel.Item>
-              <div className="app__compWeHelpd">
-                {comnamesecond.map((item, index) => (
-                  <div className="app__comp-img" key={index}>
-                    <a href={"/jobs?cn="}>
-                      <img src={item} alt="" style={{ maxHeight: 80 }} />
-                    </a>
-                  </div>
-                ))}
+              <div>
+                <img src="/images/company/lexcare.jpeg" alt="" />
               </div>
-            </Carousel.Item>
-          </Carousel>
-          </div>
-          
+              <div>
+                <img src="/images/company/dhage-associates.jpeg" alt="" />
+              </div>
+              <div>
+                <img src="/images/company/jusoculus.jpeg" alt="" />
+              </div>
+              <div>
+                <img src="/images/company/ms-associates.jpeg" alt="" />
+              </div>
+              <div>
+                <img src="/images/company/piyushchobe.jpeg" alt="" />
+              </div>
+            </Slider>
         </Container>
       </section>
     </>
