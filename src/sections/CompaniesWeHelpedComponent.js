@@ -4,6 +4,7 @@ import SectionTitle from "../Commons/SectionTitle";
 import { getPostedJobFilterList } from "../config/api";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
+import Marquee from "react-fast-marquee";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function CompaniesWeHelpedComponent() {
@@ -36,7 +37,7 @@ export default function CompaniesWeHelpedComponent() {
   //   "/images/company/ms-associates.jpeg",
   //   "/images/company/piyushchobe.jpeg",
   // ];
-  
+
   const settings = {
     className: "",
     infinite: true,
@@ -44,15 +45,13 @@ export default function CompaniesWeHelpedComponent() {
     slidesToShow: 5,
     swipeToSlide: true,
     afterChange: function (index) {
-      console.log(
-        `Slider Changed to: ${index + 1}, `
-      );
+      console.log(`Slider Changed to: ${index + 1}, `);
     },
   };
   return (
     <>
       <section className="app__section border-bottom">
-        <Container >
+        <Container>
           <SectionTitle
             title="Companies We've Helped"
             subTitle="Some of the companies we've helped recruit excellent applicants over the years."
@@ -66,26 +65,30 @@ export default function CompaniesWeHelpedComponent() {
               </div>
             ))}
           </div> */}
-          <Slider {...settings}>
-              <div>
-                <img src="/images/company/lexschool.jpeg" alt="" />
-              </div>
-              <div>
-                <img src="/images/company/lexcare.jpeg" alt="" />
-              </div>
-              <div>
-                <img src="/images/company/dhage-associates.jpeg" alt="" />
-              </div>
-              <div>
-                <img src="/images/company/jusoculus.jpeg" alt="" />
-              </div>
-              <div>
-                <img src="/images/company/ms-associates.jpeg" alt="" />
-              </div>
-              <div>
-                <img src="/images/company/piyushchobe.jpeg" alt="" />
-              </div>
-            </Slider>
+<Marquee direction-scroll>
+          {/* <Slider {...settings}> */}
+            <div>
+              <img src="/images/company/Abv-Company-Logo.jpg" alt="" />
+            </div>
+            <div>
+              <img src="/images/company/Haribhakti-Logo.jpg" alt="" />
+            </div>
+            <div>
+              <img src="/images/company/Unison-Logo.jpg" alt="" />
+            </div>
+            <div>
+              <img src="/images/company/jusoculus.jpeg" alt="" />
+            </div>
+            <div>
+              <img src="/images/company/conneqtcorp.jpg" alt="" />
+            </div>
+            <div>
+              <img src="/images/company/taxpert Logo.jpg" alt="" />
+            </div>
+            <div>
+              <img src="/images/company/supersystems logo.jpg" alt="" />
+            </div>
+          </Marquee>
         </Container>
       </section>
     </>
