@@ -8,11 +8,17 @@ export default function ReviewSlideSingle({ review }) {
       <div className="app__review-item">
         <div className="app__review-content">
           <Icon path={mdiFormatQuoteCloseOutline} />
-          <img src={"https://admin.legavac.com/uploads/testimonial/image/"+review.image} alt="" />
+          <img
+            src={
+              "https://admin.legavac.com/uploads/testimonial/image/" +
+              review.image
+            }
+            alt=""
+          />
           <h3>
             {review.name} <span>{review.designation}</span>
           </h3>
-          <p dangerouslySetInnerHTML={{__html: review.description}}></p>
+          <p dangerouslySetInnerHTML={{ __html: review.description }}></p>
         </div>
       </div>
     </>
