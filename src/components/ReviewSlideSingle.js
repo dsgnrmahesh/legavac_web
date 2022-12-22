@@ -12,7 +12,7 @@ export default function ReviewSlideSingle({ review }) {
           <h3>
             {review.name} <span>{review.designation}</span>
           </h3>
-          <p>{review.description}</p>
+          <p dangerouslySetInnerHTML={{__html: review.description}}></p>
         </div>
       </div>
     </>
