@@ -103,6 +103,7 @@ export default function Header() {
               </div>
               {/* <a href="/recruters">Recruiter</a> */}
               <a href="/company/about-us">about us</a>
+              <a href="https://disha.legavac.com/">Registration</a>
               {/* <a href="/service/plans">services</a> */}
               <a href="/Articles">articles</a>
               {window.innerWidth < 778 ? (
