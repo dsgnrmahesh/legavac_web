@@ -8,7 +8,7 @@ import Marquee from "react-fast-marquee";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function CompaniesWeHelpedComponent() {
-  // const [companyname, setCompanyName] = useState([]);
+  const [companyname, setCompanyName] = useState([]);
   const [imgCount, setImgCount] = useState(0);
   const [jobtid, setJobtid] = useState(0);
   // useEffect(() => {
@@ -60,7 +60,7 @@ export default function CompaniesWeHelpedComponent() {
             {companyname.map((item, index) => (
               <div className="app__comp-img" key={index}>
                 <a href={"/jobs?cn="}>
-                  <img src={item} alt="" style={{ maxHeight: 80 }} />
+                  <img src={item.logo} alt="" style={{ maxHeight: 80 }} />
                 </a>
               </div>
             ))}
