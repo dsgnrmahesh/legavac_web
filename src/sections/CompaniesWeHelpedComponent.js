@@ -65,8 +65,8 @@ export default function CompaniesWeHelpedComponent() {
               </div>
             ))}
           </div> */}
-<Marquee direction-scroll>
-          {/* <Slider {...settings}> */}
+          <Marquee direction-scroll>
+            {/* <Slider {...settings}> */}
             <div>
               <img src="/images/company/Abv-Company-Logo.jpg" alt="" />
             </div>
